@@ -247,7 +247,7 @@ button {
           </select>
           
           <progress class="progress-bar" value="0" max="100" id="uploader">100%</progress>
-          <input style="font-family:monospace;" class="btn btn-light" type="file" value="upload" id="fileButton"/>
+          <input style="font-family:monospace;" class="btn btn-light" type="file" accept="video/*" value="upload" id="fileButton"/>
           
           
           <button style="font-family:monospace;" class="btn btn-success" type="submit" onclick="sendMessage()">Register</button>
@@ -270,10 +270,12 @@ function sendMessage(){
   var input3 = document.getElementById("gender").value;
   var input4 = document.getElementById("bio").value;
   var input5 = document.getElementById("experience").value;
-  
+    var upl = document.getElementById("uploader").value;
+
   if(inp.trim() == ''||input.trim() == ''||input1.trim() == ''||input2.trim() == ''||input3.trim() == ''||input4.trim() == ''||input5.trim() == ''){
     alert('please fill all the fields correctly!')
   }
+  
   else{
   alert('registeration done!')
   window.location.replace("http://smurfohouse.in");
