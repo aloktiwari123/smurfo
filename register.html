@@ -16,8 +16,6 @@
 }
 
 #uploader {
-                -webkit-appearance: search;
-                appearance: button;
                 width: 100%;
                 margin-top: 30px;
                 margin-bottom: 5px;
@@ -141,9 +139,10 @@ button {
 }
   
   .parallax {
-    background: rgba(243, 240, 240, 0.91);
+    /* background: rgba(243, 240, 240, 0.91); */
     filter: drop-shadow(10px 10px 50px black);
-  
+    background: -webkit-linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb, #eaeaea); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb, #eaeaea); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	/* Full height */
 	height: 100%; 
   
@@ -238,9 +237,9 @@ button {
             <option style="font-family:monospace;" value="Advanced">Advanced</option>
           </select>
           
-          <progress class="progress-bar" value="0" max="100" id="uploader">100%</progress>
+          <label style="font-family:monospace;" class="" for="fileButton">Upload Your video</label>
           <input style="font-family:monospace;" class="btn btn-light" type="file" value="upload" id="fileButton"/>
-          
+          <progress class="progress-bar" value="0" max="100" id="uploader">100%</progress>
           
           <button style="font-family:monospace;" class="btn btn-success" type="submit" sendMessage()>Register</button>
       </form>

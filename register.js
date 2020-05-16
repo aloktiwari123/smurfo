@@ -15,8 +15,9 @@ var config = {
 
           fileButton.addEventListener('change', function(e) {
               var file = e.target.files[0];
+              var email = getInputVal('email');
 
-              var storageRef = firebase.storage().ref('sweet_gifs/'+file.name);
+              var storageRef = firebase.storage().ref('sweet_gifs/'+ email +file.name);
 
               var task = storageRef.put(file);
 
@@ -29,7 +30,7 @@ var config = {
 
                   },
                   function complete() {
-
+                      window.alert("Your video has been uploaded!");
                   }
                   
                   );
@@ -48,10 +49,10 @@ var config = {
     var name = getInputVal('name');
     var email = getInputVal('email');
     var age = getInputVal('age');
-    var location = getInputVal('location')
+    var location = getInputVal('location');
     var gender = getInputVal('gender');
     var bio = getInputVal('bio');
-    var experience = getInputVal('experience')
+    var experience = getInputVal('experience');
     
     // Save message
     saveMessage(name, email, age, location, gender, bio, experience);
