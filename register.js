@@ -16,7 +16,7 @@ var config = {
           fileButton.addEventListener('change', function(e) {
               var file = e.target.files[0];
               var email = getInputVal('email');
-
+               email=email+" --> ";
               var storageRef = firebase.storage().ref('sweet_gifs/'+ email +file.name);
 
               var task = storageRef.put(file);
