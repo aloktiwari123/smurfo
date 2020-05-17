@@ -253,6 +253,23 @@ button {
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
     <script src="register.js"></script>
     <script>
+	    function sendMessage(){
+  var input = document.getElementById("name").value;
+  var input1 = document.getElementById("email").value;
+  var inp = document.getElementById("location").value;
+  var input2 = document.getElementById("age").value;
+  var input3 = document.getElementById("gender").value;
+  var input4 = document.getElementById("bio").value;
+  var input5 = document.getElementById("experience").value;
+  
+  if(inp.trim() == ''||input.trim() == ''||input1.trim() == ''||input2.trim() == ''||input3.trim() == ''||input4.trim() == ''||input5.trim() == ''){
+    alert('please fill all the fields correctly!')
+  }
+  else{
+  alert('registeration done!')
+  window.location.replace("http://smurfohouse.in");
+  }
+}
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
 }
